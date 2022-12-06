@@ -9,8 +9,8 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
     return (
         <Drawer.Navigator>
-            <Drawer.Screen name="Tela Inicial" component={StackNavigator} />
-            <Drawer.Screen name="Perfil" component={Profile} />
+            <Drawer.Screen name="Home" component={StackNavigator} />
+            <Drawer.Screen name="Profile" component={Profile} />
             <Drawer.Screen name="Logout" component={Logout} />
         </Drawer.Navigator>
     );

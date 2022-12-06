@@ -19,7 +19,7 @@ const BottomTabNavigator = () => {
                     let iconName;
                     if (route.name === "Feed") {
                         iconName = focused ? "home" : "home-outline";
-                    } else if (route.name === "Criar Post") {
+                    } else if (route.name === "CreatePost") {
                         iconName = focused ? "add-circle" : "add-circle-outline";
                     }
                     return (
@@ -36,7 +36,7 @@ const BottomTabNavigator = () => {
             inactiveColor={"gray"}
         >
             <Tab.Screen name="Feed" component={Feed} />
-            <Tab.Screen name="Criar Post" component={CreatePost} />
+            <Tab.Screen name="CreatePost" component={CreatePost} />
         </Tab.Navigator>
     );
 }

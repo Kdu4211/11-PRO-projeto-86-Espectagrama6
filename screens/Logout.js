@@ -5,11 +5,12 @@ import firebase from "firebase";
 export default class Logout extends Component {
     componentDidMount() {
         firebase.auth().signOut();
+        this.props.navigation.replace("Login");
     }
     render() {
         return (
             <View style={styles.container}>
-                <Text>Logout</Text>
+                <Text>Sair</Text>
             </View>
         );
     }

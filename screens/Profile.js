@@ -19,7 +19,6 @@ export default class Profile extends Component {
         this.state = {
             isEnabled: false,
             light_theme: true,
-            profile_image: "",
             name: ""
         };
     }
@@ -50,13 +49,11 @@ export default class Profile extends Component {
             .on("value", function (snapshot) {
                 theme = snapshot.val().current_theme;
                 name = `${snapshot.val().first_name} ${snapshot.val().last_name}`;
-                image = snapshot.val().profile_picture;
             });
         this.setState({
             light_theme: theme === "light" ? true : false,
             isEnabled: theme === "light" ? false : true,
-            name: name,
-            profile_image: image
+            name: name
         });
     }
 
@@ -84,7 +81,7 @@ export default class Profile extends Component {
                         <Text style={styles.nameText}>{this.state.name}</Text>
                     </View>
                     <View style={styles.themeContainer}>
-                        <Text style={styles.themeText}>Tema Escuro</Text>
+                        <Text style={styles.themeText}>Tema escuro</Text>
                         <Switch
                             style={{
                                 transform: [{ scaleX: 1.3 }, { scaleY: 1.3 }]
